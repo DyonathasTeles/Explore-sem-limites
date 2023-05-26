@@ -1,0 +1,323 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-header: #F9F4FB;
+  --bg-card: #FFFFFF;
+
+  --h1-color:#B52184;
+  --tx-color: #312D64;
+
+  font-size: 62.5%;
+}
+
+body,fieldset,label,button {
+  font-family: 'Mulish', sans-serif;  
+}
+
+body {
+  font-size: 1.6rem;
+  width: 130rem;
+
+  height: 100vh;
+
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  padding: 0 5px;
+  background: var(--bg-header);
+} 
+
+.page {
+  width: 43rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  
+}
+
+header {
+  background: var(--bg-header);
+
+  display: grid;
+  justify-items: center;
+}
+
+img {
+  object-fit: cover;
+}
+
+header .astronauta {
+  margin-bottom: 1.7rem;
+  width: 100%;
+  padding: 0 3.2rem;
+  object-fit: cover;
+}
+
+header h1 {
+  font-weight: 900;
+  font-size: 3.2rem;
+  line-height: 4rem;
+
+  color: var(--h1-color);
+}
+
+header p {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  color: var(--tx-color);
+}
+
+header .seta {
+  margin: 3.5rem 0 9.3rem 0;
+}
+
+.cards {
+  background: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  padding: 5.3rem 3.9rem 5.3rem;
+}
+
+.card {
+  background: var(--bg-card);
+  box-shadow: 0px 3.31077px 13.2431px rgba(0, 0, 0, 0.25);
+  border-radius: 1.9rem;
+  padding: 2.6rem;
+
+  height: 100%;
+}
+
+.card h3 {
+  margin: 3.3rem 0 1.9rem 0;
+
+  font-weight: 900;
+  font-size: 2.9rem;
+  line-height: 3.7rem;
+
+  color: var(--h1-color);
+}
+
+.card p {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  color: var(--tx-color);
+}
+
+form {
+  background: #F9F4FB;
+  padding: 7.8rem 4rem 6.5rem;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset legend {
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3.2rem;
+  line-height: 4rem;
+
+  color: var(--h1-color);
+
+  margin-bottom: 2.6rem;
+
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+}
+
+fieldset input {
+  width: 100%;
+  height: 4.8rem;
+  padding: 0 1.6rem 0 5rem;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+
+  color: #312D64;
+}
+
+.user {
+  position: relative;
+}
+
+.user img {
+  position: absolute;
+  display: block;
+  top: 1.2rem;
+  left: 1.4rem;
+}
+
+fieldset textarea {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+
+  color: var(--tx-color);
+
+  padding: 1.2rem 1.6rem;
+}
+
+fieldset textarea, input {
+  border: 1.5px solid var(--tx-color);
+  border-radius: 1.6rem;
+}
+
+textarea::placeholder, input::placeholder {
+  color: var(--tx-color);
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.6rem;
+  line-height: 140%;
+}
+
+button {
+  margin-top: 2.4rem;
+  padding: 1rem 1.6rem;
+
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+
+  color: var(--bg-card);
+
+  background: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+  border-radius: 1.6rem;
+  border: none;
+  
+}
+
+footer {
+  background: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+  max-height: 7.8rem;
+   padding: 3.2rem 1.6rem; 
+
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+  text-align: center;
+
+  color: var(--bg-card);
+  
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  /* body {
+    background-color: beige;
+  } */
+
+  .page {
+    width: 100%;
+  }
+
+  header {
+    justify-content: space-around;
+    grid-template-areas: 'a b';
+  }
+
+  header .astronauta {
+    width: 72rem;
+    height: 73.2rem;
+    padding: 0;
+    grid-area: b;
+  }
+
+  header div {
+    grid-area: a;
+  }
+
+  header .title {
+    margin: 31.2rem 0 17.9rem ;
+  }
+
+  header .seta {
+    margin-bottom: 13.6rem;
+  }
+
+.cards {
+  width: 100%;
+  height: 57.6rem;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card {
+  padding: 3.6rem;
+  width: 36.6rem;
+  overflow: hidden;
+}
+
+.card img {
+  width: 9.7rem;
+  height: 9.7rem;
+}
+
+.card h3 {
+  margin-top: 4rem 0 2.4rem 0;
+  font-size: 3.5rem;
+  line-height: 4.4rem;
+}
+
+.card p {
+  font-size: 2.4rem;
+  line-height: 2rem;
+}
+
+.form-img {
+
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-areas: "a b";
+  justify-content: space-between;
+
+}
+
+.form-img .hide {
+  object-fit: cover;
+  height: 100%;
+  width: 64.4rem;
+  grid-area: b;
+}
+
+form {
+  grid-area: a;
+  padding: 9.5rem 9.2rem 9.5rem 10.9rem;
+}
+
+fieldset legend {
+  margin-bottom: 3rem;
+}
+
+fieldset textarea{
+  height: 12.6rem;
+}
+
+fieldset textarea, input {
+  width: 59.2rem;
+}
+  .hide {
+    display: block;
+  }
+}
+
