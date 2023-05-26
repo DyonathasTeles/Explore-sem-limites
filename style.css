@@ -20,7 +20,7 @@ body,fieldset,label,button {
 
 body {
   font-size: 1.6rem;
-  width: 130rem;
+  max-width: 43rem;
 
   height: 100vh;
 
@@ -223,9 +223,9 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* body {
-    background-color: beige;
-  } */
+  body {
+    max-width: 144rem;
+  }
 
   .page {
     width: 100%;
